@@ -1,5 +1,6 @@
 #include <iostream>
 #include "records.h"
+#include "BF.h"
 
 
 int main(void)
