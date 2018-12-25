@@ -1,3 +1,6 @@
+#include "records.h"
+using namespace std;
+
 typedef struct HT_info{
 int fileDesc;           // 
 char attrType;          // 
@@ -15,12 +18,12 @@ int HT_CreateIndex(char *fileName, char attrType, char* attrName, int attrLength
 HT_info* HT_OpenIndex(char *fileName);
 
 
-// Close pointed file & release allocated memory.. return: 0 is success, -1 is fail.
+// Close pointed file & release allocated memory. return: 0 is success, -1 is fail.
 int HT_CloseIndex(HT_info* header_info);
 
 
 // return: 0 is success, -1 is fail.
-//int HT_InsertEntry(HT_info header_info, Record record);
+int HT_InsertEntry(HT_info header_info, Record record);
 
 
 // Delete entry with attrName == value. return: 0 is success, -1 is fail.
