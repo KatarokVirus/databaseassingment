@@ -1,5 +1,5 @@
 //#include "records.h"
-#include "BF.h"
+//#include "BF.h"
 #include "HT.h"
 #include "SHT.h"
 using namespace std;
@@ -22,5 +22,7 @@ int main(void){
     }
     ht = HT_OpenIndex("HT_test.txt");
     //cout << ht->fileDesc << ht->attrType << ht->attrName << ht->attrLength << ht->numBuckets << endl;
+
+    BF_CreateFile("BF_test.txt");
     return 0;
 }

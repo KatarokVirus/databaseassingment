@@ -1,14 +1,15 @@
 #include <iostream>
 #include <fstream>
+#include "BF.h"
 #include "records.h"
 using namespace std;
 
 typedef struct HT_info{
-int fileDesc;           // 
-char attrType;          // 
-char* attrName;         // 
-int attrLength;         // 
-long int numBuckets;    // 
+    int fileDesc;           // the file, sorta
+    char attrType;          // type of key
+    char* attrName;         // name of key
+    int attrLength;         // length of key
+    long int numBuckets;    // number of buckets
 }HT_info;
 
 
