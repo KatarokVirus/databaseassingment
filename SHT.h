@@ -1,9 +1,12 @@
+#include "secondary_records.h"
+using namespace std;
+
 typedef struct SHT_info{
 int fileDesc;           // 
 char* attrName;         // 
 int attrLength;         // 
 long int numBuckets;    // 
-char* fileName          // primary id file
+char* fileName;          // primary id file
 }SHT_info;
 
 
@@ -20,7 +23,7 @@ int SHT_CloseSecondaryIndex(SHT_info* header_info);
 
 
 // return: 0 is success, -1 is fail.
-//int SHT_SecondaryInsertEntry(HT_info header_info, Record record);
+int SHT_SecondaryInsertEntry(SHT_info header_info, Record record);
 
 
 // Delete entry with attrName == value. return: 0 is success, -1 is fail.

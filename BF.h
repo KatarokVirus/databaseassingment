@@ -20,13 +20,16 @@
 #define BFE_BLOCKFIXED              -15
 #define BFE_BLOCKUNFIXED            -16
 #define BFE_EOF                     -17
-#define BFE_FILEHASFIXEDBLOCKS      -18
+#define BFE_FILEHASFIXEDBLOCKS     -18
 #define BFE_BLOCKFREE               -19
 #define BFE_BLOCKINBUF              -20
 #define BFE_BLOCKNOTINBUF           -21
 #define BFE_INVALIDBLOCK            -22
 #define BFE_CANNOTDESTROYFILE		-23
 
+
+/* H metavlhth opou kataxwreitai o kwdikos tou teleftaiou sfalmatos */
+int BF_Errno;
 
 /* Kathorizei to mege8os enos block apo to arxeio  */
 #define BLOCK_SIZE 512
@@ -137,32 +140,5 @@ void BF_PrintError(const char* message);
 
 
 #endif /* BF_H_ */
-
-
-// MEIN
-
-
-typedef struct Block{
-    Record Records[6];
-    int fileDesc;
-}Block;
-
-typedef struct Block_file{
-    Block Blocks[???];
-    int fileDesc;
-    int next_file;
-}Block_file;
-
-/*
-    - Block file appearance -
-    
-    F -> Begining of file - Info: int(fileDesc)
-    B -> Block start
-    R -> Record
-    E -> End of file: fileDesc(?) for next
-*/
-
-
-
 
 

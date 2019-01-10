@@ -1,0 +1,13 @@
+// MEIN
+
+
+typedef struct Block{
+    Record Records[6];
+    int fileDesc;
+}Block;
+
+typedef struct Block_file{
+    Block Blocks[???];
+    int fileDesc;
+}Block_file;
+
