@@ -140,5 +140,3 @@ void BF_PrintError(const char* message);
 
 
 #endif /* BF_H_ */
-
-
