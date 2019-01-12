@@ -1,8 +1,9 @@
-#include <iostream>
-#include <fstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 #include "BF.h"
 #include "records.h"
-using namespace std;
 
 typedef struct HT_info{
     int fileDesc;           // the file, sorta
